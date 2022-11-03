@@ -1,0 +1,36 @@
+{
+  "name": "rupert-chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
+    "start:dev":"nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/astorpablo15/rupert-chat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/astorpablo15/rupert-chat/issues"
+  },
+  "homepage": "https://github.com/astorpablo15/rupert-chat#readme",
+  "engines": {
+    "node": "16.13.2",
+    "npm": "8.1.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "socket.io": "^4.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
