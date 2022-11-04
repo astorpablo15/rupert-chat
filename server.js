@@ -14,7 +14,7 @@ const io = new IoServer(http);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/health', (_req, res) => {
-    res.status(200).json({
+    req.status(200).json({
         success: true,
         environment: process.env.ENVIRONMENT || 'undefined',
         health: 'Up!'
