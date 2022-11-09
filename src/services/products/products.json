@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Trapo",
+    "price": "321321",
+    "uuid": "ad758f61-d11d-41aa-b482-651e83825676"
+  },
+  {
+    "name": "Plancha",
+    "price": "12321",
+    "uuid": "99125251-9071-4771-97da-0389a5c2b6a7"
+  },
+  {
+    "name": "Rueda de auto",
+    "price": "12321",
+    "uuid": "f14097a9-1e54-41b6-8dec-6cc2e387db45"
+  }
+]
