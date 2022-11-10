@@ -29,7 +29,7 @@ function updateMessages(data){
     document.querySelector('#messagesList').innerHTML = messagesToHtml;
 }
 
-socket.on('UPDATE_DATA', (data) => {
+socket.on('UPDATE_MESSAGES', (data) => {
     messages = data
     updateMessages(data)
 });

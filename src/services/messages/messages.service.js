@@ -38,4 +38,4 @@ class MessagesService{
     }
 };
 
-module.exports = MessagesService;
+module.exports = new MessagesService();
