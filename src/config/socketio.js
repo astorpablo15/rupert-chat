@@ -19,7 +19,7 @@ class SocketConfig {
       })
     }
   }
-
+  // Metodo que configura una lista de eventos de distintos recursos al momento de realizar la primer inicializacion
   configSocket(eventList) {
     this.io.on("connection", async (socket) => {
       console.info(`Nuevo cliente conectado con id ${socket.id}`)
@@ -34,7 +34,9 @@ class SocketConfig {
       }
     });
   }
-
+  // Este metodo sirve para en caso de que se deba emitir un evento desde el servidor desde algun
+  // otro lugar de nuestra aplicacion.
+  // Solo deberia ser necesario importar la instancia de esta clase y llamar al metodo
   emitEvent(name, data) {
     this.io.emit(name, data);
   }
