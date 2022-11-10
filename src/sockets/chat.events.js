@@ -1,7 +1,9 @@
 const messagesService = require( "../services/messages/messages.service");
 
 class ChatEventList {
-  constructor(){}
+  constructor(io){
+    this.io = io
+  }
 
   // Este metodo se ejecuta al momento de inicializarse la coneccion
   // Es utilizado dentro del metodo de configuracion de una instancia de SocketConfig
@@ -14,11 +16,11 @@ class ChatEventList {
     return [
       {
         name: "NEW_MESSAGE_TO_SERVER",
-        callback: async (io, _socket, data) => {
+        callback: async (_socket, data) => {
 
           // Aqui se ejecuta la logica del evento escuchado
           await messagesService.createMesage(data);
-          io.sockets.emit('NEW_MESSAGE_FROM_SERVER', data);
+          this.io.emit('NEW_MESSAGE_FROM_SERVER', data);
         },
       },
     ];

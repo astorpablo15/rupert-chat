@@ -15,7 +15,7 @@ class SocketConfig {
     // .getListenEvents(): Events[]
     if(eventListClasses) {
       eventListClasses.forEach(eventListInstance => {
-        this.configSocket(new eventListInstance())
+        this.configSocket(new eventListInstance(this.io))
       })
     }
   }
@@ -28,7 +28,7 @@ class SocketConfig {
       if (events) {
         events.forEach((socketEvent) => {
           socket.on(socketEvent.name, (data) => {
-            socketEvent.callback(this.io, socket, data);
+            socketEvent.callback(socket, data);
           });
         });
       }

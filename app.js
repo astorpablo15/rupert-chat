@@ -9,7 +9,6 @@ require('dotenv').config();
 
 const app = express();
 const httpServer = new HttpServer(app);
-//const io = new IoServer(http);
 
 // Aqui se deben pasar a la instancia de SocketConfig, el httpServer y una lista de clases
 // del tipo EventList
